@@ -312,7 +312,7 @@ rm -fr /etc/mkinitcpio.conf.d
 mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
 ```
 ```
-vim /etc/mkinitcpio.d/default.conf
+nvim /etc/mkinitcpio.d/default.conf
 ```
 > masukin lvm2 di hooks
 
@@ -326,9 +326,7 @@ ACTION=="add", SUBSYSTEM=="net", NAME=="en*", RUN+="/usr/bin/ethtool -s $name wo
 ethtool interface | grep Wake-on
 ```
 
-```
-mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
-```
+
 ```
 echo "" > /etc/mkinitcpio.d/linux-hardened.preset
 ```
