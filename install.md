@@ -27,7 +27,7 @@ cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/network/
 arch-chroot /mnt
 ```
 ```
-echo testing > /etc/hostname
+echo recovery > /etc/hostname
 ```
 ```
 ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
