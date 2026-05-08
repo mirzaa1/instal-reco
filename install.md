@@ -133,7 +133,7 @@ useradd -m http
 echo "http ALL=(ALL:ALL) ALL" >> /etc/sudoers
 ```
 ```
-vim /etc/passwd
+nvim /etc/passwd
 ```
 > change line http:x:33:33::/srv/http:/usr/bin/nologin
 ```
@@ -169,7 +169,7 @@ exit
 echo '' > /usr/lib/os-release
 ```
 ```
-vim /usr/lib/os-release
+nvim /usr/lib/os-release
 ```
 ```
 NAME="Blackbird"
@@ -185,7 +185,7 @@ PRIVACY_POLICY_URL="https://blackbird.lektor.co.id/privacy-policy/"
 LOGO=blackbird-logo
 ```
 ```
-vim /etc/pacman.conf
+nvim /etc/pacman.conf
 ```
 > add TrustedOnly on line SigLevel = Required DatabaseOptional
 ```
@@ -207,7 +207,7 @@ systemctl enable sshd
 mkdir -p /etc/systemd/journald.conf.d/
 ```
 ```
-vim /etc/systemd/journald.conf.d/01-default.conf
+nvim /etc/systemd/journald.conf.d/01-default.conf
 ```
 ```
 [Journal]
@@ -224,7 +224,7 @@ Storage=persistent
 mkdir -p /etc/systemd/sleep.conf.d/
 ```
 ```
-vim /etc/systemd/sleep.conf.d/01-blackbird.conf
+nvim /etc/systemd/sleep.conf.d/01-blackbird.conf
 ```
 ```
 [Sleep]
@@ -236,7 +236,7 @@ AllowSuspendThenHibernate=no
 
 ## coredump config
 ```
-vim /etc/systemd/coredump.conf
+nvim /etc/systemd/coredump.conf
 ```
 comment "[coredump]" adding on last line
 ```
@@ -247,7 +247,7 @@ ProcessSizeMax=0
 
 ## login sudoers
 ```
-vim /etc/sudo.conf
+nvim /etc/sudo.conf
 ```
 adding on last line
 ```
