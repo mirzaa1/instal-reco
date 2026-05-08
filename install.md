@@ -69,7 +69,7 @@ passwd null
 echo "null ALL=(ALL:ALL) ALL" > /etc/sudoers.d/01_null
 ```
 ```
-rm /boot/initramfs-linux-lts*
+rm /boot/initramfs-linux-*
 ```
 ```
 mkdir -p /boot/efi /boot/efi/linux /boot/efi/systemd /boot/efi/rescue /boot/efi/boot
