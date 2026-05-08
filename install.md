@@ -97,6 +97,9 @@ systemctl enable systemd-networkd.socket
 systemctl enable systemd-resolved
 ```
 ```
+systemctl enable sshd
+```
+```
 mkdir /etc/cmdline.d
 ```
 ```
