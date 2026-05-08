@@ -297,7 +297,24 @@ touch /etc/cmdline.d/{01-boot.conf,02-mods.conf,03-secs.conf,04-perf.conf,05-net
 echo "root=/dev/cave/reco" > /etc/cmdline.d/01-boot.conf
 ```
 ```
-echo "rw" > /etc/cmdline.d/06-misc.conf
+echo "ipv6.disable=1" > /etc/cmdline.d/04-perf.conf
+```
+```
+echo "rw quiet" > /etc/cmdline.d/06-misc.conf
+```
+
+```
+rm -fr /etc/mkinitcpio.conf.d
+```
+```
+mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
+```
+```
+vim /etc/mkinitcpio.d/default.conf
+```
+> masukin lvm2 di hooks
+```
+
 ```
 ```
 mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
@@ -313,7 +330,7 @@ nvim /etc/mkinitcpio.d/linux-hardened.preset
 # mkinitcpio preset file for the 'linux-hardened' package
 
 ALL_config="/etc/mkinitcpio.d/default.conf"
-ALL_kver="/boot/kernelvmlinuz-linux-hardened"
+ALL_kver="/boot/kernel/vmlinuz-linux-hardened"
 ALL_kerneldest="/boot/kernel/vmlinuz-linux-hardened"
 
 PRESETS=('default')
@@ -321,7 +338,7 @@ PRESETS=('default')
 
 #default_config="/etc/mkinitcpio.conf"
 #default_image="/boot/initramfs-linux-lts.img"
-default_uki="/boot/efi/linux/arch-linux-hardened.efi"
+default_uki="/boot/efi/linux/blackbird-recovery.efi"
 #default_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
 
 #fallback_config="/etc/mkinitcpio.conf"
