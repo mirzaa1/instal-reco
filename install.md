@@ -136,15 +136,6 @@ default_uki="/boot/efi/linux/arch-linux-hardened.efi"
 #fallback_options="-S autodetect"
 ```
 ```
-mkdir boot/kernel boot/efi
-```
-```
-mkdir boot/efi/linux boot/efi/systemd boot/efi/boot
-```
-```
-mv vmlinuz-* intel-* boot/kernel
-```
-```
 bootctl --path=/boot install
 ```
 ```
