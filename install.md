@@ -115,6 +115,9 @@ echo "rw" > /etc/cmdline.d/06-misc.conf
 mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
 ```
 ```
+echo "" > /etc/mkinitcpio.d/linux-hardened.preset
+```
+```
 nvim /etc/mkinitcpio.d/linux-hardened.preset
 ```
 
