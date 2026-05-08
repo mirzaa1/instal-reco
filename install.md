@@ -274,7 +274,9 @@ systemctl enable systemd-resolved
 systemctl enable sshd
 ```
 
-
+```
+systemctl enable firewalld
+```
 
 ```
 rm /boot/initramfs-linux-*
@@ -313,9 +315,17 @@ mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
 vim /etc/mkinitcpio.d/default.conf
 ```
 > masukin lvm2 di hooks
-```
 
 ```
+nvim /etc/udev/rules.d/81-wol.rules
+```
+```
+ACTION=="add", SUBSYSTEM=="net", NAME=="en*", RUN+="/usr/bin/ethtool -s $name wol g"
+```
+```
+ethtool interface | grep Wake-on
+```
+
 ```
 mv /etc/mkinitcpio.conf /etc/mkinitcpio.d/default.conf
 ```
@@ -352,3 +362,10 @@ bootctl --path=/boot install
 ```
 mkinitcpio -P
 ```
+```
+exit
+```
+```
+umount -R /mnt
+```
+
