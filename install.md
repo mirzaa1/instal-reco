@@ -78,7 +78,7 @@ mkdir -p /boot/efi /boot/efi/linux /boot/efi/systemd /boot/efi/rescue /boot/efi/
 mkdir /boot/kernel
 ```
 ```
-mv /boot/intel-ucode.img /boot/vmlinuz-linux-lts /boot/kernel
+mv /boot/intel-ucode.img /boot/vmlinuz-linux-* /boot/kernel
 ```
 ```
 nvim /etc/systemd/network/20-ethernet.network
