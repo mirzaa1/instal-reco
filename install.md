@@ -17,7 +17,7 @@ pvcreate --dataalignment 4096 /dev/sda
 vgcreate cave /dev/mapper/cave
 ```
 ```
-lvcreate -L 5G cave -n reco
+lvcreate -L 6.5G cave -n reco
 ```
 ```
 lvcreate -l50%FREE cave -n pool
