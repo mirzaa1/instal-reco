@@ -14,7 +14,7 @@ parted /dev/sda mklabel gpt
 pvcreate --dataalignment 4096 /dev/sda
 ```
 ```
-vgcreate cave /dev/mapper/cave
+vgcreate cave /dev/sda
 ```
 ```
 lvcreate -L 6.5G cave -n reco
